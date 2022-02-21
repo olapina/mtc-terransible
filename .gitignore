@@ -15,3 +15,6 @@ crash.log
 
 # Ansible
 *.retry
+
+# Github token
+github-token
