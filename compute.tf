@@ -62,11 +62,11 @@ resource "aws_instance" "mtc_main" {
 #   }
 # }
 
-resource "null_resource" "grafana_install" {
-  depends_on = [aws_instance.mtc_main]
-  provisioner "local-exec" {
-    command = "ansible-playbook -i aws_hosts --key-file=/home/ubuntu/.ssh/mtckey playbooks/grafana.yml"
-  }
-}
+# resource "null_resource" "grafana_install" {
+#   depends_on = [aws_instance.mtc_main]
+#   provisioner "local-exec" {
+#     command = "ansible-playbook -i aws_hosts --key-file=/home/ubuntu/.ssh/mtckey playbooks/grafana.yml"
+#   }
+# }
 
 
