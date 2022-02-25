@@ -79,7 +79,10 @@ pipeline {
     echo "Success!"
     }
     failure {
-    sh 'terraform destroy -auto-approve -var-file="$BRANCH_NAME.tfvars" -no-color'
+      sh 'terraform destroy -auto-approve -var-file="$BRANCH_NAME.tfvars" -no-color'
+    }
+    aborted {
+      sh 'terraform destroy -auto-approve -var-file="$BRANCH_NAME.tfvars" -no-color'
     }
   }
 }
