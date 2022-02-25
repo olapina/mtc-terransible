@@ -36,6 +36,13 @@ pipeline {
        sh 'terraform apply -auto-approve -var-file="$BRANCH_NAME.tfvars" -no-color'
       }
     }
+    stage('Inventory') {
+      steps {
+        sh '''printf \\ 
+          "\\n$(terraform output -json instance_ips | jq -r \'.[]\')" \\
+          >> aws_hosts'''
+      }
+    }
     stage('EC2 Wait') {
       steps {
         sh '''aws ec2 wait instance-status-ok \\
