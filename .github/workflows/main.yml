@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 12
       - name: Sync Branches PR
-        uses: monoku/sync-branches-pr@v0
+        uses: monoku/sync-branches-pr@v0.0.1
         with:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           SOURCE_BRANCH: "master"
