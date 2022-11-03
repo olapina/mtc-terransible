@@ -20,4 +20,5 @@ jobs:
         with:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           SOURCE_BRANCH: "master"
-          TARGET_BRANCH_STARTS_WITH: "dev/"
+          TARGET_BRANCH_STARTS_WITH: "dev"          
+          TARGET_BRANCH_STARS_WITH: "dev"
