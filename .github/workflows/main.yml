@@ -19,5 +19,5 @@ jobs:
         uses: monoku/sync-branches-pr@v0.0.1
         with:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          SOURCE_BRANCH: "main"     
-          TARGET_BRANCH_STARS_WITH: "dev"
+          SOURCE_BRANCH: "dev"     
+          TARGET_BRANCH_STARS_WITH: "main"
