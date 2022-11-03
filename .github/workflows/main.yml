@@ -16,8 +16,8 @@ jobs:
         with:
           node-version: 14
       - name: Sync Branches PR
-        uses: monoku/sync-branches-pr@v0.0.1
+        uses: olapina/testing-sync-branches@v1.0.0
         with:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           SOURCE_BRANCH: "dev"     
-          TARGET_BRANCH_STARS_WITH: "main"
+          TARGET_BRANCH_STARTS_WITH: "main"
