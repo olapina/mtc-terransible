@@ -7,7 +7,7 @@ on:
 jobs:
   sync-branches:
     runs-on: ubuntu-20.04
-    name: Syncing branches
+    name: Syncing branches (testing)
     steps:
       - name: Checkout
         uses: actions/checkout@v2
